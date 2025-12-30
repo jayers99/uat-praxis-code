@@ -18,16 +18,20 @@
 - Created `EXTRACTION_GUIDE.md` with detailed instructions
 - Created `push-extracted-repo.sh` helper script for GitHub upload
 - Prepared extracted repository in `extracted-repos/opinions-framework/`
+- Created `opinions-framework-extracted.tar.gz` for easy transfer
 
 ## 📦 Deliverables
 
 ### Extracted Repository
-**Location**: `extracted-repos/opinions-framework/`
+
+**Available in two formats**:
+1. **Directory**: `extracted-repos/opinions-framework/` (nested git repository)
+2. **Tarball**: `opinions-framework-extracted.tar.gz` (178 KB, includes full git history)
 
 **Contents**:
 ```
 opinions-framework/
-├── .git/               # Full git history (22 commits)
+├── .git/               # Full git history (24 commits)
 ├── .gitignore          # Ignore patterns for documentation repo
 ├── README.md           # Comprehensive project documentation
 ├── praxis.yaml         # Project configuration (domain: write, stage: capture)
@@ -95,7 +99,7 @@ git push --tags  # if any tags exist
 
 ### Step 3: Verify
 Visit https://github.com/jayers99/opinions-framework and verify:
-- ✓ All 22 commits are present
+- ✓ All 24 commits are present
 - ✓ All files are present (docs/, praxis.yaml, README.md, .gitignore)
 - ✓ Commit history is intact and matches original
 - ✓ README displays correctly

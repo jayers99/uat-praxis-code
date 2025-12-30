@@ -26,9 +26,15 @@ The extracted repository includes:
 
 ### 3. Location
 
-The extracted repository is located at:
-```
-extracted-repos/opinions-framework/
+The extracted repository is available in two formats:
+
+1. **Directory format**: `extracted-repos/opinions-framework/` (included in this repository)
+2. **Tarball format**: `opinions-framework-extracted.tar.gz` (for easy transfer and extraction)
+
+To extract from the tarball:
+```bash
+tar -xzf opinions-framework-extracted.tar.gz
+cd opinions-framework
 ```
 
 ## Next Steps: Creating the GitHub Repository
@@ -49,6 +55,23 @@ Since this automated process cannot create GitHub repositories directly, follow 
 
 From your local machine or a secure environment with GitHub credentials:
 
+**Option A - Extract from tarball first**:
+```bash
+# Extract the tarball
+tar -xzf opinions-framework-extracted.tar.gz
+cd opinions-framework
+
+# Add the new GitHub repository as remote
+git remote add origin https://github.com/jayers99/opinions-framework.git
+
+# Push all branches and history
+git push -u origin main
+
+# Push all tags (if any)
+git push --tags
+```
+
+**Option B - Use the directory directly**:
 ```bash
 # Navigate to the extracted repository
 cd extracted-repos/opinions-framework
@@ -63,12 +86,18 @@ git push -u origin main
 git push --tags
 ```
 
+**Option C - Use the provided helper script**:
+```bash
+# Runs interactive prompts and handles the push process
+./push-extracted-repo.sh
+```
+
 ### Step 3: Verify the Repository
 
 1. Visit https://github.com/jayers99/opinions-framework
 2. Verify that:
    - All files are present (`docs/`, `praxis.yaml`, `README.md`, `.gitignore`)
-   - Git history shows 22 commits (19 original + 2 new commits for README and .gitignore)
+   - Git history shows 24 commits (19 original + merge commits + 2 new commits for README and .gitignore)
    - The commit history matches the original (use `git log` to compare)
 
 ### Step 4: Update the Parent Repository
@@ -91,7 +120,7 @@ After successfully creating the new repository, the `projects/write/opinions-fra
 
 ```
 opinions-framework/
-├── .git/               # Full git history (22 commits)
+├── .git/               # Full git history (24 commits)
 ├── .gitignore          # Ignore patterns
 ├── README.md           # Project documentation
 ├── praxis.yaml         # Project configuration
@@ -129,7 +158,7 @@ To verify the extraction was successful:
 # Check commit count
 cd extracted-repos/opinions-framework
 git log --oneline | wc -l
-# Should show 22 commits
+# Should show 24 commits
 
 # Check file structure
 ls -la
