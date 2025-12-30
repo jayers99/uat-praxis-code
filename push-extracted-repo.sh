@@ -44,8 +44,16 @@ echo ""
 CURRENT_BRANCH=$(git branch --show-current)
 if [ "$CURRENT_BRANCH" != "main" ]; then
     echo "⚠️  Warning: Current branch is '$CURRENT_BRANCH', not 'main'"
-    echo "Switching to main branch..."
-    git checkout main
+    # Check if main branch exists
+    if git show-ref --verify --quiet refs/heads/main; then
+        echo "Switching to main branch..."
+        git checkout main
+    else
+        echo "❌ Error: main branch does not exist in this repository"
+        echo "Available branches:"
+        git branch -a
+        exit 1
+    fi
 fi
 
 # Show commit history summary

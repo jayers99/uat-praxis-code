@@ -97,7 +97,7 @@ git push --tags
 1. Visit https://github.com/jayers99/opinions-framework
 2. Verify that:
    - All files are present (`docs/`, `praxis.yaml`, `README.md`, `.gitignore`)
-   - Git history shows 24 commits (19 original + merge commits + 2 new commits for README and .gitignore)
+   - Git history shows 24 commits (19 original + 3 merge commits + 2 new documentation commits)
    - The commit history matches the original (use `git log` to compare)
 
 ### Step 4: Update the Parent Repository

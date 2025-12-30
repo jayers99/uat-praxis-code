@@ -5,7 +5,7 @@
 ### 1. Repository Extraction ✓
 - Cloned source repository `jayers99/praxis-ai`
 - Used `git-filter-repo` to extract `projects/write/opinions-framework/` with full history
-- Successfully preserved 19 commits from the original repository
+- Successfully preserved 19 original commits + 3 merge commits from the original repository
 - Restructured files to be at repository root (removed `projects/write/opinions-framework/` prefix)
 
 ### 2. Repository Preparation ✓
