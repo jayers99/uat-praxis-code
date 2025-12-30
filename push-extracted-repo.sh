@@ -65,7 +65,7 @@ git log --oneline -5
 echo ""
 
 # Check if origin remote exists
-if git remote get-url origin &> /dev/null; then
+if git remote get-url origin >/dev/null 2>&1; then
     CURRENT_ORIGIN=$(git remote get-url origin)
     echo "⚠️  Warning: Remote 'origin' already exists: $CURRENT_ORIGIN"
     echo ""

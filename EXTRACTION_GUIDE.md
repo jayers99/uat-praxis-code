@@ -57,6 +57,7 @@ From your local machine or a secure environment with GitHub credentials:
 
 **Option A - Extract from tarball first**:
 ```bash
+# The tarball is in the repository root
 # Extract the tarball
 tar -xzf opinions-framework-extracted.tar.gz
 cd opinions-framework

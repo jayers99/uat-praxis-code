@@ -84,8 +84,10 @@ Requires: SSH key configured in GitHub settings
 ```bash
 git remote add origin https://github.com/jayers99/opinions-framework.git
 ```
-Requires: Personal Access Token (PAT) with repo permissions
-When prompted for password, use your PAT
+**Requires**: Personal Access Token (PAT) with `repo` scope
+- **Create token**: https://github.com/settings/tokens/new
+- **Scopes needed**: Check `repo` (Full control of private repositories)
+- **When prompted for password**: Use your PAT instead of GitHub password
 
 ## Verify After Push
 
