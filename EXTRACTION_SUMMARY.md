@@ -12,7 +12,7 @@
 - Added comprehensive README.md documenting the project
 - Created appropriate .gitignore file for documentation repository
 - Committed both files to the extracted repository (2 additional commits)
-- Total commits in extracted repo: 22
+- Total commits in extracted repo: 24
 
 ### 3. Documentation & Tooling ✓
 - Created `EXTRACTION_GUIDE.md` with detailed instructions
@@ -117,7 +117,7 @@ Before pushing to GitHub, verify locally:
 ```bash
 cd extracted-repos/opinions-framework
 
-# ✓ Check commit count (should be 22)
+# ✓ Check commit count (should be 24)
 git log --oneline | wc -l
 
 # ✓ Check file structure (should show all expected files)
